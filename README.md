@@ -37,11 +37,16 @@ php artisan key:generate
 ```
 To configure the database change database info in .env file as:
 
-DB_CONNECTION=mysql
+DB_CONNECTION=mysql 
+
 DB_HOST=mysql
+
 DB_PORT=3306
+
 DB_DATABASE=rangodatabase
+
 DB_USERNAME=dbuser
+
 DB_PASSWORD=dbuser
 
 And run still inside container bash:
