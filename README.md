@@ -25,8 +25,6 @@ docker build .
 cp env.example .env
 docker exec -it rangoDB-php-fpm /bin/bash
 ```
-Edit the .env file with the same database configurantions that docker-compose.yml file.
-
 Inside the container bash:
 
 ```bash
@@ -37,13 +35,21 @@ npm install
 npm install react-router-dom
 php artisan key:generate
 ```
+To configure the database change database info in .env file as:
 
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=rangodatabase
+DB_USERNAME=dbuser
+DB_PASSWORD=dbuser
+
+And run still inside container bash:
 
 ```bash
 php artisan migrate:refresh --seed
 
 ```
-
 
 Access  [http://localhost:8888] to register or login and enjoy the application and [http://localhost] to access PHPmyadmin. 
 
