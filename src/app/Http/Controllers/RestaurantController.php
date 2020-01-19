@@ -20,7 +20,7 @@ class RestaurantController extends Controller
 
         $restaurants = $this->getRestaurantsWithoutWinners();
         $restaurants->toJson();
-        if (Carbon::now()->format('H:i:s') >= '18:30:00'){
+        if (Carbon::now()->format('H:i:s') >= '11:30:00'){
             $winner = $this->showPollResult();
             $returnJson = array(
                 "winner" => $winner,

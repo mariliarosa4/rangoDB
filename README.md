@@ -25,8 +25,6 @@ docker build .
 cp env.example .env
 docker exec -it rangoDB-php-fpm /bin/bash
 ```
-Edit the .env file with the same database configurantions that docker-compose.yml file.
-
 Inside the container bash:
 
 ```bash
@@ -37,15 +35,32 @@ npm install
 npm install react-router-dom
 php artisan key:generate
 ```
+To configure the database change database info in .env file as:
 
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=rangodatabase
+DB_USERNAME=dbuser
+DB_PASSWORD=dbuser
+
+And run still inside container bash:
 
 ```bash
 php artisan migrate:refresh --seed
 
 ```
 
-
 Access  [http://localhost:8888] to register or login and enjoy the application and [http://localhost] to access PHPmyadmin. 
+
+I also tried to create as an APIrest, but I did'nt have time to implement the authentication using token, but the routes could be tested on Postman with this link to the collection https://www.getpostman.com/collections/b666556b65fbd963bc2b.
+
+To create the client ID run:
+
+```bash
+php artisan passport:install
+```
+
 
 ## Requirements
 
