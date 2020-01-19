@@ -3,7 +3,7 @@ FROM phpdockerio/php72-fpm:latest
 WORKDIR "/application"
 
 RUN apt-get update
-RUN apt-get install npm
+RUN apt-get -y install npm
 RUN npm install
 RUN npm install react-router-dom
 

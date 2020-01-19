@@ -6,16 +6,16 @@ services:
 
     redis:
       image: redis:alpine
-      container_name: teste-dbserver-redis
+      container_name: rangoDB-redis
 
     mysql:
       image: mysql:5.6
-      container_name: teste-dbserver-mysql
+      container_name: rangoDB-mysql
       volumes:
         - ./src:/application
       environment:
         - MYSQL_ROOT_PASSWORD=root
-        - MYSQL_DATABASE=dbname2
+        - MYSQL_DATABASE=rangodatabase
         - MYSQL_USER=dbuser
         - MYSQL_PASSWORD=dbuser
         - TZ=America/Sao_Paulo
@@ -24,7 +24,7 @@ services:
 
     webserver:
       image: nginx:alpine
-      container_name: teste-dbserver-webserver
+      container_name: rangoDB-webserver
       working_dir: /application
       volumes:
           - ./src:/application
@@ -34,7 +34,7 @@ services:
 
     php-fpm:
       build: phpdocker/php-fpm
-      container_name: teste-dbserver-php-fpm
+      container_name: rangoDB-php-fpm
       working_dir: /application
       volumes:
         - ./src:/application
