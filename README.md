@@ -9,9 +9,13 @@ Clone the project repository
 git clone git@github.com:mariliarosa4/randoDB.git
 ```
 
+Inside the folder run: 
+
+
 ```bash
-composer install
+docker-compose up -d
 ```
+
 
 ```bash
 npm install
