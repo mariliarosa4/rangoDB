@@ -12,8 +12,6 @@ git clone https://github.com/mariliarosa4/rangoDB.git
 
 Inside the folder run: 
 
-//editar o compser ylm pro nome da pasta certo
-
 ```bash
 docker-compose up -d
 ```
@@ -27,6 +25,7 @@ docker build .
 cp env.example .env
 docker exec -it rangoDB-php-fpm /bin/bash
 ```
+Edit the .env file with the same database configurantions that docker-compose.yml file.
 
 Inside the container bash:
 
