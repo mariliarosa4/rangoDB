@@ -25,7 +25,7 @@ php artisan migrate
 
 Access  [http://localhost:8888] to register or login and enjoy the application.
 
-## Built With
+## Requirements
 
 * [Laravel](https://laravel.com) - The PHP Framework For Web Artisans
 * [React](https://reactjs.org) - A JavaScript library for building user interfaces
