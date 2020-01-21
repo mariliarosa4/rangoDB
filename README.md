@@ -1,6 +1,6 @@
 # rangoDB
 Application to choose the restaurant of day for DBServer team have lunch together!
-Every day at 11:30 a.m. the result will be showed when page refresh.
+Every day at 11:30 a.m. the result will be shown when page refresh.
 
 ## Getting Started
 
@@ -58,7 +58,7 @@ php artisan migrate:refresh --seed
 
 Access  [http://localhost:8888] to register or login and enjoy the application and [http://localhost] to access PHPmyadmin. 
 
-I also tried to create as an APIrest, but I did'nt have time to implement the authentication using token, but the routes could be tested on Postman with this link to the collection https://www.getpostman.com/collections/b666556b65fbd963bc2b.
+I also tried to create as an API rest, but I didn't have time to implement the authentication using token, but the routes could be tested on Postman with this link to the collection https://www.getpostman.com/collections/b666556b65fbd963bc2b.
 
 To create the client ID run:
 
@@ -71,4 +71,4 @@ php artisan passport:install
 
 * [Laravel](https://laravel.com) 
 * [React](https://reactjs.org) 
-* [Docker](https://www.docker.com/) I'ts my first time, sorry about anything :)
+* [Docker](https://www.docker.com/) It's my first time, sorry about anything:)
